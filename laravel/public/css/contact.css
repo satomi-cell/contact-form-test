@@ -1,0 +1,116 @@
+body {
+    background: #f5f3f2;
+    font-family: serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #7a6c63;
+    font-weight: normal;
+}
+
+form > div {
+    margin-bottom: 25px;
+}
+
+form > div > label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page select,
+.contact-page textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+textarea {
+    height: 120px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    display: block;
+    margin: 40px auto 0;
+    background: #7a6c63;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+form > div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+form > div label {
+    width: 200px; /* ラベル幅固定 */
+}
+
+form > div input[type="text"],
+form > div input[type="email"],
+form > div select,
+form > div textarea {
+    flex: 1;
+}
+
+input[type="radio"] {
+    flex: none;
+    width: auto;
+    margin-right: 5px;
+}
+
+input[type="radio"] {
+    appearance: auto !important;
+    -webkit-appearance: radio !important;
+    background: none !important;
+    border: none !important;
+}
+
+.error {
+    color: red !important;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.name-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.tel-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

@@ -1,0 +1,32 @@
+.thanks-container {
+    text-align: center;
+    margin-top: 150px;
+    position: relative;
+}
+
+.thanks-container h2 {
+    font-size: 24px;
+    color: #7a6c63;
+    margin-bottom: 40px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #7a6c63;
+    color: #fff;
+    text-decoration: none;
+}
+
+.thanks-container::before {
+    content: "Thank you";
+    position: absolute;
+    font-size: 120px;
+    color: rgba(0,0,0,0.05);
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; 
+}
+
+rm

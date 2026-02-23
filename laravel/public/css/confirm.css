@@ -1,0 +1,55 @@
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #7a6c63;
+}
+
+/* テーブル */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.confirm-table th {
+    width: 30%;
+    background-color: #b8a79c;
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.confirm-table td {
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* ボタンエリア */
+.button-area {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.button-area button {
+    padding: 10px 40px;
+    border: none;
+    background-color: #7a6c63;
+    color: white;
+    cursor: pointer;
+}
+
+.button-area a {
+    display: inline-block;
+    padding: 10px 40px;
+    color: #7a6c63;
+    text-decoration: none;
+}
