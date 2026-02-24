@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Confirm</h2>
+<div class="contact-wrapper">
+    <h2 class="text-2xl font-serif text-center mb-10 text-[#8c7b6b]">
+        Confirm
+    </h2>
 
     <table class="confirm-table">
         <tr>

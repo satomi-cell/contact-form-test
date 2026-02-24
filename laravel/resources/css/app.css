@@ -1,5 +1,5 @@
 @import './admin.css';
-@tailwind base;
+/*@tailwind base;*/
 @tailwind components;
 @tailwind utilities;
 /* ===== 検索フォーム横並び ===== */
@@ -298,4 +298,225 @@ input[type="date"] {
 .admin-table thead th {
     background-color: #5a4a3f !important;
     color: #ffffff !important;
+}
+
+body {
+    background: #f5f3f2;
+    font-family: serif;
+}
+
+.contact-wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #7a6c63;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form-label {
+    width: 250px;
+    font-size: 14px;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+.form-input {
+    flex: 1;
+}
+
+.form-input input:not([type="radio"]),
+.form-input select,
+.form-input textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.name-group,
+.tel-group {
+    display: flex;
+    gap: 10px;
+}
+
+.tel-group input {
+    width: 80px;
+}
+
+textarea {
+    height: 120px;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn button {
+    background: #7a6c63;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+/* ラジオボタン修正 */
+input[type="radio"] {
+    width: auto !important;
+    margin-right: 5px;
+}
+
+/* ===== ラジオボタン完全リセット ===== */
+input[type="radio"] {
+    all: revert;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    margin-right: 6px;
+}
+
+/* ===== エラーメッセージ ===== */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ===== Confirm Design ===== */
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.confirm-table th {
+    width: 30%;
+    background-color: #b7a89a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: normal;
+}
+
+.confirm-table td {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.confirm-table tr {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.confirm-table tr:last-child {
+    border-bottom: none;
+}
+
+/* ボタンエリア */
+.button-area {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button-area form {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.button-area button {
+    padding: 8px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 送信ボタン */
+.button-area form:first-child button {
+    background-color: #8c7b6b;
+    color: white;
+}
+
+/* 修正ボタン */
+.button-area form:last-child button {
+    background: none;
+    color: #8c7b6b;
+    text-decoration: underline;
+}
+
+/* ===== Confirm Design ===== */
+
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.confirm-table th {
+    width: 30%;
+    background-color: #b7a89a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: normal;
+}
+
+.confirm-table td {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.confirm-table tr {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.button-area {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button-area form {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.button-area button {
+    padding: 8px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-area form:first-child button {
+    background-color: #8c7b6b;
+    color: white;
+}
+
+.button-area form:last-child button {
+    background: none;
+    color: #2c241e;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.button-area form:last-child button:hover {
+    color: #000000;
 }
