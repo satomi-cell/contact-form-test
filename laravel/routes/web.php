@@ -1,32 +1,27 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductController::class, 'index'])->name('home');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-    
-    Route::get('/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
+// 商品一覧
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
-    Route::delete('/admin/{id}', [AdminController::class, 'destroy'])
-        ->name('admin.destroy');
-    
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+// 商品検索
+Route::get('/products/search', [ProductController::class, 'search'])->name('products.search');
 
-Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
+// 商品登録ページ
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
 
-Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
-Route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
+// 商品登録処理
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
-Route::get('/contact/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
+// 商品詳細(編集)
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
-require __DIR__.'/auth.php';
+// 商品更新(detail画面から送信）
+Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
+
+// 商品削除
+Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');

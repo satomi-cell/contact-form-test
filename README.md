@@ -12,8 +12,8 @@
 ### Dockerビルド
 
 ```
-git clone https://github.com/satomi-cell/contact-form-test.git
-cd contact-form-test
+git clone https://github.com/satomi-cell/mogitate.git
+cd mogitate
 docker-compose up -d --build
 ```
 
@@ -25,6 +25,8 @@ composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
+php artisan db:seed
+php artisan storage:link
 ```
 
 ---

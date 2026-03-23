@@ -1,0 +1,18 @@
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-back {
+  background: #ccc;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-submit {
+  background: #f5c400;
+  padding: 10px 20px;
+  border: none;
+}

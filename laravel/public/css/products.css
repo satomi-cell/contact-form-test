@@ -1,0 +1,198 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination .active span {
+    background: #f5c400;
+    color: #fff;
+}
+
+svg{
+    width:20px;
+}
+
+.products textarea {
+    width: 100%;
+    height: 120px;
+}
+
+.modal {
+    display: none;
+}
+
+#modal-toggle:checked ~ .modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #fff;
+    width: 260px; 
+    padding: 16px; 
+    border-radius: 8px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.modal-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-content label {
+    font-size: 14px;
+}
+
+.modal-content button {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.open-btn {
+    cursor: pointer;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.open-btn {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    width: 200px;
+    padding: 0 40px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+
+/* 矢印 */
+.open-btn::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #666;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    height: 36px;
+    padding: 0 10px;
+}
+
+/* 適用ボタン */
+.apply-btn {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #f5c400;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* リセット */
+.reset-btn {
+    color: purple;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* ヘッダー横並び */
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 追加ボタン */
+.add-btn {
+    background: orange;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    opacity: 0.8;
+}
+
+button[type="submit"] {
+    height: 36px;
+    padding: 0 16px;
+    background: #f5c400; 
+    color: #333;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.85;
+}

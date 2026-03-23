@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionablyLate</title>
+    <title>mogitate</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    {{--<link rel="stylesheet" href="{{ asset('css/contact.css') }}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/confirm.css') }}">--}}
-    {{--<link rel="stylesheet" href="{{ asset('css/thanks.css') }}">--}}
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- ページごとのCSS -->
+    @yield('css')
 </head>
 
-<body class="bg-[#f8f6f4]">
+<body>
 
-    <!-- ===== 共通ヘッダー ===== -->
-<header class="bg-white shadow">
-    <div class="relative max-w-6xl mx-auto px-4 py-4 flex items-center">
+<!-- ===== ヘッダー ===== -->
+<header class="header">
+    <div class="header-inner">
 
-        <div></div>
+        <h1 class="logo">
+            <a href="/">mogitate</a>
+        </h1>
 
-      <h1 class="absolute left-1/2 -translate-x-1/2 text-2xl font-serif text-gray-700">
-          FashionablyLate
-      </h1>
+        @auth
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button class="logout-button">
+                logout
+            </button>
+        </form>
+        @endauth
 
-<div class="ml-auto">
- @auth
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button class="text-sm border px-4 py-1 rounded hover:bg-gray-100">
-            logout
-        </button>
-    </form>
- @endauth
-</div> 
-   </div>
+    </div>
 </header>
-    <!-- ===== ページ内容 ===== -->
-    <main class="py-10">
-        @yield('content')
-    </main>
+
+<!-- ===== ページ内容 ===== -->
+<main class="main">
+    @yield('content')
+</main>
 
 </body>
 </html>
